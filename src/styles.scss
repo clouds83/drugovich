@@ -1,1 +1,80 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --grey-100: #f6f6f6;
+  --grey-200: #dddddd;
+  --grey-400: #616161;
+  --blue-400: #4486ea;
+  --green-400: #3ab72f;
+  --orange-400: #e18f53;
+  --green-success: #2acc30;
+  --red-danger: #ec2424;
+
+  --input-border: #d1d1d1;
+  --input-text: #6d6262;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--grey-100);
+  font-family: "Monda", sans-serif;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400;
+}
+
+table {
+  border-spacing: 0;
+}
+
+table,
+th,
+td {
+  padding: 0;
+}
+
+main {
+  max-width: 1034px;
+  margin: 70px auto;
+  padding: 0 40px;
+}
+
+.button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  font-family: "Monda", sans-serif;
+  font-size: 15px;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  height: 34px;
+  width: 91px;
+  border-radius: 5px;
+  border: 1px solid var(--blue-400);
+}
+
+.error-msg {
+  text-align: center;
+  color: var(--red-danger);
+}
+
+@media (width < 768px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  main {
+    margin: 32px 0 106px;
+    padding: 0 24px;
+  }
+}

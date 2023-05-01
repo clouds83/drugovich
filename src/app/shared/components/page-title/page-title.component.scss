@@ -1,0 +1,59 @@
+.page-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--grey-200);
+  padding: 0 10px;
+  height: 45px;
+  margin-bottom: 45px;
+
+  h1 {
+    font-size: 27px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .button {
+    background-color: var(--blue-400);
+    transition: all 0.15s linear;
+
+    &:hover {
+      background-color: #2257a7;
+      border-color: #2257a7;
+      transition: all 0.15s linear;
+    }
+  }
+}
+
+@media (width < 768px) {
+  .page-title {
+    padding: 0;
+    margin-bottom: 24px;
+
+    h1 {
+      font-size: 22px;
+      img {
+        height: 22px;
+        width: 22px;
+      }
+    }
+
+    .button {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      position: fixed;
+      bottom: 16px;
+      right: 16px;
+
+      > *:not(img) {
+        display: none;
+      }
+
+      img {
+        height: 32px;
+      }
+    }
+  }
+}

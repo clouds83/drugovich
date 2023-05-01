@@ -1,0 +1,17 @@
+header {
+  background-color: var(--grey-400);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 85px;
+}
+
+@media (width < 768px) {
+  header {
+    height: 72px;
+
+    img {
+      width: 56px;
+    }
+  }
+}

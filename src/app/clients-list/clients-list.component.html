@@ -1,0 +1,30 @@
+<app-page-title
+  page-title="Listagem de clientes"
+  page-icon="user-icon"
+  button-text="Novo"
+  button-link="/new-client"
+  button-icon="plus-icon"
+/>
+
+<ng-container *ngIf="isLoading; else list">
+  <app-spinner *ngIf="!showError"></app-spinner>
+  <p *ngIf="showError" class="error-msg">{{ showError }}</p>
+</ng-container>
+
+<ng-template #list>
+  <table>
+    <tr *ngFor="let client of clients">
+      <td>{{ client.name }}</td>
+      <td>{{ client.cnpj | mask : "000.000.000/0000-00" }}</td>
+      <td class="status">
+        <span
+          [ngClass]="client.status === 'Ativo' ? 'active' : 'inactive'"
+        ></span>
+        {{ client.status }}
+      </td>
+      <td><a href="" class="button">Editar</a></td>
+    </tr>
+  </table>
+
+  <p>Exibindo {{ clients?.length }} de {{ clients?.length }} clientes</p>
+</ng-template>

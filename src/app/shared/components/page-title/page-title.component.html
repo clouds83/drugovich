@@ -1,0 +1,11 @@
+<div class="page-title">
+  <h1>
+    <img *ngIf="pageIcon" src="../../../assets/{{ pageIcon }}.svg" alt="" />
+    {{ pageTitle }}
+  </h1>
+
+  <a *ngIf="buttonText || buttonIcon" [routerLink]="buttonLink" class="button">
+    <img *ngIf="buttonIcon" src="../../../assets/{{ buttonIcon }}.svg" alt="" />
+    <span>{{ buttonText }}</span>
+  </a>
+</div>

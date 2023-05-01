@@ -1,0 +1,75 @@
+form {
+  div {
+    margin-bottom: 12px;
+  }
+
+  label {
+    font-size: 15px;
+    display: block;
+  }
+
+  input,
+  select {
+    box-sizing: border-box;
+    font-family: "Monda", sans-serif;
+    color: var(--input-text);
+
+    width: 312px;
+    height: 42px;
+    padding-left: 13px;
+    border: 1px solid var(--input-border);
+  }
+
+  .buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 8px;
+  }
+
+  .submit {
+    border: 1px solid var(--green-400);
+    background-color: var(--green-400);
+    transition: all 0.15s linear;
+
+    &:hover {
+      background-color: transparent;
+      color: var(--green-400);
+      transition: all 0.15s linear;
+    }
+  }
+
+  .cancel {
+    border: 1px solid var(--grey-400);
+    background-color: var(--grey-400);
+    transition: all 0.15s linear;
+
+    &:hover {
+      background-color: transparent;
+      color: var(--grey-400);
+      transition: all 0.15s linear;
+    }
+  }
+}
+
+@media (width < 768px) {
+  form {
+    input,
+    select {
+      width: 100%;
+    }
+
+    .buttons {
+      flex-direction: column-reverse;
+      position: fixed;
+      bottom: 16px;
+      left: 16px;
+      right: 16px;
+      margin: 0;
+
+      & > * {
+        height: 48px;
+        width: 100%;
+      }
+    }
+  }
+}

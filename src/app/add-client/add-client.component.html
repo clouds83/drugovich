@@ -1,0 +1,25 @@
+<app-page-title page-title="Novo Cliente" page-icon="user-icon" />
+
+<form #myForm="ngForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="name">Nome</label>
+    <input type="text" id="name" name="name" ngModel required />
+  </div>
+  <div>
+    <label for="cnpj">CNPJ</label>
+    <input type="text" mask="000.000.000/0000-00" />
+  </div>
+  <div>
+    <label for="status">Status</label>
+    <select id="status" name="status" ngModel required>
+      <option value="active">Ativo</option>
+      <option value="inactive">Inativo</option>
+    </select>
+  </div>
+  <div class="buttons">
+    <button type="button" class="button cancel" (click)="onCancel()">
+      Voltar
+    </button>
+    <button type="submit" class="button submit">Salvar</button>
+  </div>
+</form>
